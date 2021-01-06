@@ -1,5 +1,6 @@
 import React from 'react';
 import LinkCard from './LinkCard';
+import '../pages/main.css';
 export default function LinkList({ links, refreshLinks }) {
     return (
         <div>

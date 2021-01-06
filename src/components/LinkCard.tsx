@@ -1,5 +1,6 @@
 import React from 'react';
 
+const date = new Date();
 export default function LinkCard({ link, refreshLinks }) {
     const archiveLink = async () => {
         link.archived = true;
@@ -31,7 +32,8 @@ export default function LinkCard({ link, refreshLinks }) {
             <div className="card-header">{link.name}</div>
             <div className="card-body">
                 <a href={link.url}>{link.url}</a>
-                <p>{link.description}</p>
+                <p className="desc">{link.description}</p>
+                <p>Created At:  {date.toDateString()}</p>
             </div>
             <div className="card-footer">
                 <button className="btn btn-warning mr-2" onClick={archiveLink}>

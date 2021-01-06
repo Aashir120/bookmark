@@ -21,6 +21,7 @@
     "dotenv": "^8.2.0",
     "gatsby": "^2.26.1",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.4.0",
     "react-dom": "^16.13.1"
   }
 }

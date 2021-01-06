@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../pages/main.css';
 
 export default function LinkForm({ refreshLinks }) {
     const [name, setName] = useState('');
@@ -27,12 +28,13 @@ export default function LinkForm({ refreshLinks }) {
     };
     return (
         <div className="card">
-            <div className="card-header">Add Link</div>
+            <div className="card-header">Add bookmark</div>
             <div className="card-body">
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="name">Title</label>
                         <input
+                            required
                             type="text"
                             name="name"
                             className="form-control"
@@ -43,6 +45,7 @@ export default function LinkForm({ refreshLinks }) {
                     <div className="form-group">
                         <label htmlFor="url">URL</label>
                         <input
+                            required
                             type="text"
                             name="url"
                             className="form-control"
@@ -53,13 +56,14 @@ export default function LinkForm({ refreshLinks }) {
                     <div className="form-group">
                         <label htmlFor="description">Description</label>
                         <textarea
+                            required
                             name="description"
                             className="form-control"
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                         />
                     </div>
-                    <button type="submit" className="btn btn-primary">
+                    <button type="submit" className="btn button1 btn-primary">
                         Submit
                     </button>
                 </form>
